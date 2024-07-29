@@ -283,19 +283,19 @@ Let's begin.
 
             Combine expressions:
             For example the following rule will match any TCP traffic on port 80 (web) with 192.168.1.254 or 192.168.1.200 as destination host:
-            - tcpdump '((tcp) and (port 80) and ((dst host 192.168.1.254) or (dst host 192.168.1.200)))'
+            - tcpdump "((tcp) and (port 80) and ((dst host 192.168.1.254) or (dst host 192.168.1.200)))"
 
             This one will match any ICMP traffic involving the destination with physical/MAC address 00:01:02:03:04:05:
-            - tcpdump '((icmp) and ((ether dst host 00:01:02:03:04:05)))'
+            - tcpdump "((icmp) and ((ether dst host 00:01:02:03:04:05)))"
 
             This will match any traffic for the destination network 192.168 except destination host 192.168.1.200:
-            - tcpdump '((tcp) and ((dst net 192.168) and (not dst host 192.168.1.200)))'
+            - tcpdump "((tcp) and ((dst net 192.168) and (not dst host 192.168.1.200)))"
 
         </details>
 
 4. In a new window/tab, log into the client to initiate traffic. Using a separate window/tab will allow us to have an SSH session open to each compute instance.
 
-    In the command shell ssh to the client compute instance. Take note of the **"Private IP"** of the **"client"** instance
+    In the command shell ssh to the client compute instance. Take note of the **"Private IP"** of the **"client"** instance.
 
     ![developertools-sshclient](images/developertools-sshclient.png)
 
