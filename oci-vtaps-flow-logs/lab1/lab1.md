@@ -6,7 +6,7 @@ Estimated Time: 10 minutes
 
 ### About Virtual Cloud Networks and Subnets
 
-Virtual Cloud Networks (VCNs) provide customizable and private cloud networks in Oracle Cloud Infrastructure (OCI). Just like a traditional data center network, the VCN provides customers with complete control over their cloud networking environment. This includes assigning private IP address spaces, creating subnets and route tables. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/Overview_of_VCNs_and_Subnets.htm) for more information on Virtual Cloud Networks.
+Virtual Cloud Networks (VCNs) provide customizable and private cloud networks in Oracle Cloud Infrastructure (OCI). Just like a traditional data center network, the VCN provides customers with complete control over their cloud networking environment. This includes assigning private IP address spaces, creating subnets and route tables. [Visit our VCN and Subnet documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/Overview_of_VCNs_and_Subnets.htm) for more information on Virtual Cloud Networks.
 
 A Subnet is a subdivision of a VCN. Each subnet in a VCN consists of a contiguous range of IPv4 addresses and optionally IPv6 addresses that do not overlap with other subnets in the VCN.
 
@@ -189,6 +189,8 @@ Let's begin.
     * Click **"Continue"**
 
         ![loggroup-create](images/flowlogs-vcn.png)
+
+    **Note**: Enablement points describe resources used to collect logs.
 
     * Virtual cloud network: **"hol-vcn"**
     * Click **"Add enablement points"**

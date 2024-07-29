@@ -6,7 +6,7 @@ Estimated Time: 20 minutes
 
 ### About VTAPs
 
-Virtual Test Access Point, VTAP, functionality is sometimes referred to as traffic mirroring. It copies traffic that traverses a specific point in the network and sends the mirrored traffic to a network packet collector or network analytics tool for further analysis. A VTAP is like a virtual version of port mirroring except, instead of mirroring a port, we mirror traffic at a specific Oracle resource, such as OCI Database service, Exadata virtual machine (VM) cluster, instance virtual network interface cards (VNICs), load balancer as a service (LBaaS), or Autonomous Data Warehouse. Mirrored traffic generated at the VTAP source counts against the total available bandwidth of the VNIC. If congestion occurs, OCI prioritizes production traffic, and mirrored traffic is dropped first. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/vtap.htm) for more information on VTAPs.
+Virtual Test Access Point, VTAP, functionality is sometimes referred to as traffic mirroring. It copies traffic that traverses a specific point in the network and sends the mirrored traffic to a network packet collector or network analytics tool for further analysis. A VTAP is like a virtual version of port mirroring except, instead of mirroring a port, we mirror traffic at a specific Oracle resource, such as OCI Database service, Exadata virtual machine (VM) cluster, instance virtual network interface cards (VNICs), load balancer as a service (LBaaS), or Autonomous Data Warehouse. Mirrored traffic generated at the VTAP source counts against the total available bandwidth of the VNIC and provides users with a copy of data for use cases such as troubleshooting and compliance. If congestion occurs, OCI prioritizes production traffic, and mirrored traffic is dropped first. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/vtap.htm) for more information on VTAPs.
 
 Network Load Balancer provides the benefits of flow high availability, source and destination IP addresses, and port preservation. It is designed to handle volatile traffic patterns and millions of flows, offering high throughput while maintaining ultra low latency. The Network Load Balancer will be used by the VTAP for receiving VTAP flows and distributing output for monitoring. [Visit our documentation](https://docs.oracle.com/en-us/iaas/compute-cloud-at-customer/topics/nlb/network-load-balancing.htm) for more information on NLBs.
 
@@ -143,8 +143,8 @@ Let's begin.
 
       ![vtap-capturefilter.](images/vtap-capturefilter.png)
 
-    * Click **"Create capture filter"**
-    * Click **"Create VTAP"**
+    * Click **"Create capture filter"** button
+    * Click **"Create VTAP"** button
 
         ![vtap-createvtapfinish](images/vtap-createvtapfinish.png)
 
@@ -184,7 +184,7 @@ Let's begin.
 
 4. On the Security list page, click **Default Security List**
 
-    * Click **"Default Security Lists for vcn-lab"**
+    * Click **"Default Security Lists for hol-lab"**
 
       ![vcn-selectdefaultsl](images/vcn-selectdefaultsl.png)
 

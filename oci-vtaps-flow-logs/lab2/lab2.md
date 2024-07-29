@@ -6,9 +6,9 @@ Estimated Time: 15 minutes
 
 ### About Compute
 
-Oracle Cloud Infrastructure Compute lets you provision and manage compute hosts, known as instances. You can create instances as needed to meet your compute and application requirements. After you create an instance, you can access it securely from your computer or from within the Oracle Cloud Shell, restart it, attach and detach volumes, and terminate it when you're done with it. Any changes made to the instance's local drives are lost when you terminate it. Any saved changes to volumes attached to the instance are retained. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Compute/home.htm) for more information on Compute.
+Oracle Cloud Infrastructure Compute lets you provision and manage compute hosts, known as instances. You can create instances as needed to meet your compute and application requirements. After you create an instance, you can access it securely from your computer or from within the Oracle Cloud Shell, restart it, attach and detach volumes, and terminate it when you're done with it. Any changes made to the instance's local drives are lost when you terminate it. Any saved changes to volumes attached to the instance are retained. [Visit our Compute documentation](https://docs.oracle.com/en-us/iaas/Content/Compute/home.htm) for more information on Compute.
 
-Oracle Cloud Infrastructure (OCI) Cloud Shell is a web browser-based terminal accessible from the Oracle Cloud Console. Cloud Shell provides an ephemeral machine to use as a host for a Linux shell, pre-configured with the latest version of the OCI Command Line Interface (CLI) and a number of useful tools. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm) for more information on the Cloud Shell.
+Oracle Cloud Infrastructure (OCI) Cloud Shell is a web browser-based terminal accessible from the Oracle Cloud Console. Cloud Shell provides an ephemeral machine to use as a host for a Linux shell, pre-configured with the latest version of the OCI Command Line Interface (CLI) and a number of useful tools. [Visit our Cloud Shell documentation](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm) for more information on the Cloud Shell.
 
 ### Objectives
 
@@ -79,8 +79,8 @@ Let's begin.
 
 7. Next, select the private network definition list as the default favorite within the network for Cloud Shell.
 
-    * Click star in the **"Favorite"** column for hol-pn-access
-    * Name: **"Close"**
+    * Click the star in the **"Favorite"** column for hol-pn-access
+    * Click **"Close"**
 
         ![cloudshell-privatenetworkdefault](images/cloudshell-privatenetworkdefault.png)
 
@@ -121,7 +121,7 @@ Let's begin.
 
         ![compute-createinstance](images/compute-createinstance.png)
 
-3. In the Create compute instance configuration window that opens, update the compute instance a **Name**, scroll down to the **Primary NIC Information** section and update the **Subnet**, scroll down to **Primary VNIC IP Address** section select **Manually assign IPv4 address** and enter IP address, scroll down to the **Add SSH Key** section and select **Paste public keys** to paste add the SSH Key copied from the previous section and click **Create**.
+3. In the Create compute instance configuration window that opens, update the compute instance with a **Name**, scroll down to the **Primary NIC Information** section and update the **Subnet**, scroll down to **Primary VNIC IP Address** section select **Manually assign IPv4 address** and enter IP address, scroll down to the **Add SSH Key** section and select **Paste public keys** to paste add the SSH Key copied from the previous section and click **Create**.
 
     Name:
     * Name: **"client"**
