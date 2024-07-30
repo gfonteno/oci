@@ -1,4 +1,4 @@
-# OCI Network Visualizer and Path Analyzer
+# OCI Network VCN and Subnets
 
 ## Introduction
 

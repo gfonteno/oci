@@ -1,4 +1,4 @@
-# OCI Network Compute
+# OCI Compute
 
 ## Introduction
 
