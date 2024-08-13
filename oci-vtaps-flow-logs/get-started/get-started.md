@@ -22,9 +22,10 @@ Oracle offers two types of Cloud Accounts:
 
 ### Prerequisites
 
-- Cloud Account Name - The name of your tenancy (supplied by the administrator or in your Oracle Cloud welcome email)
-- Username
-- Password
+* Cloud Account Name - The name of your tenancy (supplied by the administrator or in your Oracle Cloud welcome email)
+* Administration access to the respective home region
+* Username
+* Password
 
 ## Task 1: Log into Oracle Cloud
 

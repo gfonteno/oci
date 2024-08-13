@@ -21,7 +21,7 @@ In this lab, you will:
 
 ## Task 1: Launch the Cloud Shell and Generate SSH Keys
 
-In this lab and subsequent ones, we can utilize the cloud shell to access the various compute instances. While this can be accomplished in multiple ways, one of the easiest is to use the **Cloud Shell** embedded in the OCI Console. This functionality is only available in the **HOME** region of your account.
+In this lab and subsequent ones, we can utilize the cloud shell to access the various compute instances. While this can be accomplished in multiple ways, one of the easiest is to use the **Cloud Shell** embedded in the OCI Console. **Cloud Shell** is available in every region, but **Cloud Shell** Private Networking is only available in your **HOME** region.
 
 Let's begin.
 
@@ -181,7 +181,7 @@ Let's begin.
 
 6. Click **Oracle Cloud** in the top left of the menu bar to return to the home page.
 
-    * Click **"Oracle CLoud"**
+    * Click **"Oracle Cloud"**
 
         ![oraclecloudhome](images/oraclecloudhome.png)
 

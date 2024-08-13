@@ -10,14 +10,14 @@ Virtual Cloud Networks (VCNs) provide customizable and private cloud networks in
 
 A Subnet is a subdivision of a VCN. Each subnet in a VCN consists of a contiguous range of IPv4 addresses and optionally IPv6 addresses that do not overlap with other subnets in the VCN.
 
-A DRG acts as a virtual router, providing a path for traffic between your on-premises networks and VCNs, and can also be used to route traffic between VCNs. Using different types of attachments, custom network topologies can be constructed using components in different regions and tenancies.
+A Dynamic Routing Gateway, DRG, acts as a virtual router, providing a path for traffic between your on-premises networks and VCNs, and can also be used to route traffic between VCNs. Using different types of attachments, custom network topologies can be constructed using components in different regions and tenancies. [Visit our DRG documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingDRGs.htm) for more information on Dynamic Routing Gateways.
 
 ### Objectives
 
 In this lab, you will:
 
-* Create the Dynamic Routing Gateway, DRG, for establishing connectivity between VCNs
-* Build a Virtual Cloud Network (VCN) to provide the foundation for the network access
+* Create the DRG for establishing connectivity between VCNs
+* Build a VCN to provide the foundation for the network access
 * Create two VCN and public subnets to accommodate the client/server communication
 
 When you complete the exercise, the network topology will look like the following, one VCN and two subnets.
@@ -28,13 +28,13 @@ When you complete the exercise, the network topology will look like the followin
 
 Let's begin.
 
-1. To begin the lab exercise, ensure you are logged into the Oracle Cloud console and select the desired **Home Region** region. The region can be accessed on the menu bar located at top right of the screen.
+1. To begin the lab exercise, ensure you are logged into the Oracle Cloud console and select the desired **Home Region**. The region can be accessed on the menu bar located at top right of the screen. Based on your account access, select the desired **Home Region** to complete the exercise.
 
     * Click **"US East (Ashburn)"**
 
         ![home-region](images/region-home.png)
 
-        **Note**: This lab can be completed in any OCI region you have access to with the required resources. Based on your account, select the desired region to complete the exercise. For the purpose of this lab we will use the **"US East (Ashburn)"** region.
+        **Note**: For the purpose of this lab we will use the **"US East (Ashburn)"** region.
 
 ## Task 2: Create DRG
 
@@ -104,7 +104,7 @@ Let's begin.
 5. In the Dynamic Routing Gateways Attachments list, click **Create DRG Attachment**.
 
     * Click **"Create DRG Attachment"**
-    * Name: **"hol-vcn-drgattch"**
+    * Name: **"hol-vcn1-drgattach"**
     * Select **"hol-drg"**
     * Click **"Create DRG Attachment"**
 
@@ -175,7 +175,7 @@ Let's begin.
 5. In the Dynamic Routing Gateways Attachments list, click **Create DRG Attachment**.
 
     * Click **"Create DRG Attachment"**
-    * Name: **"hol-vcn2-drgattch"**
+    * Name: **"hol-vcn2-drgattach"**
     * Select **"hol-drg"**
     * Click **"Create DRG Attachment"**
 
@@ -193,9 +193,9 @@ Let's begin.
 
         ![vcn2-routetables](images/vcn2-routetables.png)
 
-2. In the Route Tables list, click **Default Route Table for hol-vnc2**.
+2. In the Route Tables list, click **Default Route Table for hol-vcn2**.
 
-    * Click **Default Route Table for hol-vnc2**
+    * Click **Default Route Table for hol-vcn2**
 
         ![vcn2-defaultroutetables](images/vcn2-defaultroutetables.png)
 
@@ -226,9 +226,9 @@ Let's begin.
 
         ![vcn1-routetables](images/vcn1-routetables.png)
 
-7. In the Route Tables list, click **Default Route Table for hol-vnc1**.
+7. In the Route Tables list, click **Default Route Table for hol-vcn1**.
 
-    * Click **"Default Route Table for hol-vnc1"**
+    * Click **"Default Route Table for hol-vcn1"**
 
         ![vcn1-defaultroutetables](images/vcn1-defaultroutetables.png)
 

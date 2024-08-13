@@ -120,7 +120,7 @@ With log groups, you do not have to rely on complex compartment hierarchies to s
 
 Let's begin.
 
-1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Observability and Management** and click on **Log Groups**.
+1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Observability and Management** and under **Logging**, click **Log Groups**.
 
     * Click the Navigation Menu (top left corner)
     * Click **"Observability and Management"**
@@ -145,13 +145,13 @@ Let's begin.
 
     ![loggroup-list](images/loggroup-list.png)
 
-## Task 4: Create VCN Flow Log
+## Task 5: Create VCN Flow Log
 
 With VCN Flow Logs, you can capture network traffic information to support monitoring and security needs. We will enable the flow logs in the section below.
 
 Let's begin.
 
-1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Networking** and click on **Flow logs**.
+1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Networking** and under **Network Command Center**, click **Flow logs**.
 
     * Click the Navigation Menu (top left corner)
     * Click **"Networking"**
@@ -165,7 +165,7 @@ Let's begin.
 
         ![loggroup-createloggroups](images/flowlogs-enableflowlogs.png)
 
-3. In the Enable flow logs **"Basic information"** window, use the data below:
+3. In the Enable flow logs **"Basic information"** window, fill in the name, log group and capture filter details with the data below.
 
     Name and Flow log destination
 
@@ -196,13 +196,13 @@ Let's begin.
     * Click **"Add enablement points"**
     * Click **"Next"**
 
-        ![loggroup-create](images/flowlogs-enablementpoints.png
+        ![loggroup-create](images/flowlogs-enablementpoints.png)
 
 5. In the Enable flow logs **"Review and create"** window, use the data below:
 
     * Click **"Enable flow logs"**
 
-        ![loggroup-create](images/flowlogs-enable.png
+        ![loggroup-create](images/flowlogs-enable.png)
 
 6. **Flow Logs** are now enabled, you can now move forward to the **Next Task**.
 
@@ -212,7 +212,7 @@ Let's begin.
 
 7. Click **Oracle Cloud** in the top left of the menu bar to return to the home page.
 
-    * Click **"Oracle CLoud"**
+    * Click **"Oracle Cloud"**
 
         ![oraclecloud-home](images/oraclecloud-home.png)
 

@@ -202,7 +202,7 @@ Let's begin.
 
 7. Click **Oracle Cloud** in the top left of the menu bar to return to the home page.
 
-    * Click **"Oracle CLoud"**
+    * Click **"Oracle Cloud"**
 
         ![oraclecloudhome](images/oraclecloudhome.png)
 

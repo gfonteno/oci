@@ -23,6 +23,7 @@ Oracle offers two types of Cloud Accounts:
 ### Prerequisites
 
 * Cloud Account Name - The name of your tenancy (supplied by the administrator or in your Oracle Cloud welcome email)
+* Administration access to the respective home region
 * Username
 * Password
 
@@ -44,14 +45,14 @@ If you've signed out of the Oracle Cloud, use these steps to sign back in.
 )
 		![2.2](images/logininput.png)
 
-4. Based on the Multi-factor authentication setup for your account, provide authentication to sign into the account. For example, click **Allow** on the app or enter your **authentication code** and click **Verify** based on the authentication setup. For more details, refer the [Managing Multifactor Authentication documentation](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/usingmfa.htm)
-  
+4. Based on the Multi-factor authentication setup for your account, provide authentication to sign into the account. For example, click **Allow** on the app or enter your **authentication code** and click **Verify** based on the authentication setup. For more details, refer the [Managing Multifactor Authentication documentation](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/usingmfa.htm).
+
 	* Click **"Verify"**
 
 		![2.2](images/loggedinview.png)
-  
+
 5. After verification, you will be signed in to Oracle Cloud!
-  
+
 	* Log In Complete
 
 		![2.2](images/loggedinview.png)

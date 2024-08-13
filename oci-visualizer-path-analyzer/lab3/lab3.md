@@ -6,7 +6,7 @@ Estimated Time: 20 minutes
 
 ### About Network Visualizer and Path Analyzer
 
-An Oracle virtual network is composed of virtual cloud networks (VCNs), subnets, gateways, and other resources. These entities are related and connected through routing that's often complex. These resources can also have complex relationships with other Oracle Cloud Infrastructure (OCI) services. The ability to have a concise picture of these entities and their relationships is essential for understanding the design and operation of a virtual network. The Network Visualizer provides a diagram of the implemented topology of all VCNs in a selected region and tenancy. [Visit our Network Visualizer documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/path_analyzer.htmncepts/cloudshellintro.htm) for more information on the Network Visualizer.
+An Oracle virtual network is composed of virtual cloud networks (VCNs), subnets, gateways, and other resources. These entities are related and connected through routing that's often complex. These resources can also have complex relationships with other Oracle Cloud Infrastructure (OCI) services. The ability to have a concise picture of these entities and their relationships is essential for understanding the design and operation of a virtual network. The Network Visualizer provides a diagram of the implemented topology of all VCNs in a selected region and tenancy. [Visit our Network Visualizer documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/path_analyzer.htm) for more information on the Network Visualizer.
 
 Network Path Analyzer (NPA) provides a unified and intuitive capability you can use to identify virtual network configuration issues that impact connectivity. NPA collects and analyzes the network configuration to determine how the paths between the source and the destination function or fail. No actual traffic is sent, instead the configuration is examined and used to confirm reachability. [Visit our Network Path Analyzer documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/network_visualizer.htm) for more information on the Network Path Analyzer.
 
@@ -36,11 +36,11 @@ When you open a diagram for a compartment, it shows resources for all compartmen
 
 You can see cross-region connections between network resources and you can also quickly change regions in the Console and see the VCNs in another region.
 
-**Note**: No traffic is needed to provide the topology, the Network Visualizer is built out using the various configuration elements.
+**Note**: No network traffic is required to create the topology; the Network Visualizer is built out using current configuration elements.
 
 Let's begin.
 
-1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Networking** and under Load Balancers select **Network Command Center**, then **Network visualizer**.
+1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Networking** and under **Network Command Center**, click **Network visualizer**.
 
     * Click the Navigation Menu (top left corner)
     * Click **"Networking"**
@@ -50,10 +50,22 @@ Let's begin.
 
 2. On the visual canvas, users can easily customize the desired view. Click on the **details** icon to view the legend.
 
+    See the following options to manipulate the image.
+
+    * Export Image - click the downward facing arrow icon to initiate the export modal.
+
+        ![nv-vcndetails](images/nv-imageexport.png)
+
+    * Resize Image - click the symbols in the bottom right corner of the image canvas to resize and center the image.
+
+        ![nv-vcndetails](images/nv-imageresize.png)
+
     * Click **"details"**
     * Click on the **"X"** to close the window.
 
       ![nv-maplegend](images/nv-maplegend.png)
+
+    **Note**:You can also click-and-hold the objects dragging them to manipulate the image into a customizable depiction.
 
 3. As shown below, Click on the **DRG** orange circle icon to see the associated status and additional details. Once selected the details will appear in the right window pane.
 
@@ -66,7 +78,7 @@ Let's begin.
 
       ![nv-drgadditionaldetails](images/nv-drgadditionaldetails.png)
 
-        **Note**: The additional details allows for direct access to view attachments, DRG route tables and teh import and export route tables accordingly.
+        **Note**: The additional details allows for direct access to view attachments, DRG route tables and the import and export route tables accordingly.
 
 4. As shown below, Click on the **DRG VCN Attachment** chain link icon. Once selected the details will appear in the right window pane.
 
@@ -84,21 +96,11 @@ Let's begin.
 
 6. The **Network Visualizer** is complete, you can now move forward to the **Next Task**
 
-    See the following options to manipulate the image.
-
-    * Export Image - click the downward facing arrow icon to initiate the export modal.
-
-        ![nv-vcndetails](images/nv-imageexport.png)
-
-    * Resize Image - click the symbols in the bottom right corner of the image canvas to resize and center the image.
-
-        ![nv-vcndetails](images/nv-imageresize.png)
-
 ## Task 2: Network Path Analyzer
 
-Now that we have the network and compute deployed, let's proceed with the **Network Visualizer**.
+Now that we have the network and compute deployed, let's proceed with the **Network Path Analyzer**.
 
-NPA carefully examines routing and security configurations and identifies the potential network path your defined traffic traverses, along with information about virtual networking entities in the path. In addition to the path information, output of these checks includes how routing rules and network access lists (security lists, NSGs, and so on) allow or deny traffic. The sources and destinations could be within OCI, or across OCI and on-premises, or OCI and internet. NPA analyzes all the standard OCI networking elements with their associated configuration.
+NPA carefully examines routing and security configurations and identifies the potential network path your defined traffic traverses, along with information about virtual networking entities in the path. In addition to the path information, output of these checks includes how routing rules and network access lists (security lists and network security groups) allow or deny traffic. The sources and destinations could be within OCI, or across OCI and on-premises, or OCI and internet. NPA analyzes all the standard OCI networking elements with their associated configuration.
 
 Using NPA, you can:
 
@@ -118,7 +120,7 @@ The following source and destination scenarios are supported:
 
 Let's begin.
 
-1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Networking** and under Load Balancers select **Network Command Center**, then **Network Path Analyzer**.
+1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Networking** and under **Network Command Center**, click **Network Path Analyzer**.
 
     * Click the Navigation Menu (top left corner)
     * Click **"Networking"**
@@ -159,7 +161,7 @@ Let's begin.
 
         **Note:** Loading may take a minute to generate the results.
 
-3. As noted in the output, the stats of the forward path is **Unreachable**.
+3. As noted in the output, the stats suggest the forward path is **Unreachable**.
 
     * Analysis Output:
 
@@ -172,6 +174,8 @@ Let's begin.
     From the analysis, we can see that the issue with connectivity is related to the security list entry for port 80 in server VCN, **hol-vcn2**.
 
 4. Click **Default Security List for hol-vcn2** to view the security list and to update accordingly.
+
+    **Note** Clicking the security list as directed below will open a new browser tab for editing the security list. Do not close the original browser tab, you will go back to it when finished editing the Security List.
 
     * Click **"Default Security List for hol-vcn2"**
 
@@ -186,13 +190,19 @@ Let's begin.
 
         ![npa-sladdingressroute](images/npa-sladdingressroute.png)
 
+6. On the Security List page add the ingress route.
+
+    ![npa-successful](images/npa-successful.png)
+
+7. Re-run analysis. Select hol-npa
+
+8. Analyze
+
     * Click **"Analyze"** (Scroll to the top of the previous page)
 
         ![npa-analyze](images/npa-analyze.png)
 
-6. On the Security List page add the ingress route.
-
-    ![npa-successful](images/npa-successful.png)
+9. Validate the path is now successfully bi-directional
 
 **Congratulations!** You have completed this lab.
 

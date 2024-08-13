@@ -6,7 +6,7 @@ Estimated Time: 20 minutes
 
 ### About VTAPs
 
-Virtual Test Access Point, VTAP, functionality is sometimes referred to as traffic mirroring. It copies traffic that traverses a specific point in the network and sends the mirrored traffic to a network packet collector or network analytics tool for further analysis. A VTAP is like a virtual version of port mirroring except, instead of mirroring a port, we mirror traffic at a specific Oracle resource, such as OCI Database service, Exadata virtual machine (VM) cluster, instance virtual network interface cards (VNICs), load balancer as a service (LBaaS), or Autonomous Data Warehouse. Mirrored traffic generated at the VTAP source counts against the total available bandwidth of the VNIC and provides users with a copy of data for use cases such as troubleshooting and compliance. If congestion occurs, OCI prioritizes production traffic, and mirrored traffic is dropped first. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/vtap.htm) for more information on VTAPs.
+Virtual Test Access Point, VTAP, functionality is sometimes referred to as traffic mirroring. It copies traffic that traverses a specific point in the network and sends the mirrored traffic to a network packet collector or network analytics tool for further analysis. A VTAP is like a virtual version of port mirroring except, instead of mirroring a port, we mirror traffic at a specific Oracle resource, such as OCI Database service, Exadata virtual machine (VM) cluster, instance virtual network interface cards (VNICs), load balancer as a service (LBaaS), or Autonomous Data Warehouse. Mirrored traffic generated at the VTAP source counts against the total available bandwidth of the VNIC and provides users with a copy of data for use cases such as troubleshooting and compliance. VTAP traffic is encapsulated in VXLAN to retain the original pack for traffic monitoring. If congestion occurs, OCI prioritizes production traffic, and mirrored traffic is dropped first. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/vtap.htm) for more information on VTAPs.
 
 Network Load Balancer provides the benefits of flow high availability, source and destination IP addresses, and port preservation. It is designed to handle volatile traffic patterns and millions of flows, offering high throughput while maintaining ultra low latency. The Network Load Balancer will be used by the VTAP for receiving VTAP flows and distributing output for monitoring. [Visit our documentation](https://docs.oracle.com/en-us/iaas/compute-cloud-at-customer/topics/nlb/network-load-balancing.htm) for more information on NLBs.
 
@@ -80,19 +80,19 @@ Let's begin.
       ![nlb-listeneraddbackends](images/nlb-listeneraddbackends.png)
 
     Specify Health check policy
-    * Protocol: **"Protocol"**
-    * Port: **"TCP Port 22"**
+    * Protocol: **"TCP"**
+    * Port: **"22"**
     * Click **"Next"**
 
       ![nlb-listenerbackendshealthcheck](images/nlb-listenerbackendshealthcheck.png)
 
-5. In the Network load balancer **Review and create** screen, review the configuration and click ** **Create network load balancer**.
+5. In the Network load balancer **Review and create** screen, review the configuration and click **Create network load balancer**.
 
     * Click **"Create network load balancer"**
 
       ![nlb-createnetworkloadbalancer](images/nlb-createnetworkloadbalancer.png)
 
-6. The **NLB** is configured, you can now move forward to the **Next Task**
+6. The **NLB** is configured, you can now move forward to the **Next Task**.
 
 ## Task 2: Create VTAP
 
@@ -100,7 +100,7 @@ Now that we have the network load balancer deployed, let's proceed with the VTAP
 
 Let's begin.
 
-1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Networking** and under Network Command Center select **VTAPs**, then in the VTAP list **Create VTAP**.
+1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Networking** and under **Network Command Center**, select **VTAPs**.
 
     * Click the Navigation Menu (top left corner)
     * Click **"Networking"**
@@ -108,7 +108,7 @@ Let's begin.
 
       ![vtap-navigation](images/vtap-navigation.png)
 
-2. In the menu that opens, we need to input data into multiple fields. Unless specified otherwise in this tutorial, leave the fields with the **Default** input.
+2. In the menu that opens, unless specified otherwise in this tutorial, leave the fields with their **Default** input.
 
     * Click **"Create VTAP"**
 
@@ -308,15 +308,15 @@ Let's begin.
 
         ![developertools-sshclientserver](images/developertools-sshclientserver.png)
 
-5. Now switch back to the VTAP console and view the output on the VTAP compute instance.
+5. Now switch back to the VTAP console and view the output on the VTAP compute instance. When evaluating the output take note of packets with the VXLAN header value of UDP/4789 and the underlying TCP/22 traffic. The TCP/22 flows were initiated with the SSH session above.
 
     ![developertools-vtapoutput](images/developertools-vtapoutput.png)
 
     **Note**: The mirrored traffic in the output window can be saved and downloaded for further analysis.
 
-## Task 4: Flow Log Search
+## Task 5: Flow Log Search
 
-Now that we have explored the mirrored client/server communication using VTAP, let's proceed with inspecting the network traffic using the Flow Logs. Flow search provides a full view into the Flow Logs to evaluate flows to and from compute instances. The Flow Search capabilities gives you various ways to search for specific traffic. For this exercise we will use the destination ip address and the destination port.
+Now that we have explored the mirrored client/server communication using VTAP, let's proceed with inspecting the network traffic using the flow logs. Flow search provides a full view into the flow logs to evaluate flows to and from compute instances. The Flow Search capabilities gives you various ways to search for specific traffic. For this exercise we will use the destination ip address and the destination port.
 
 Let's begin.
 
@@ -330,7 +330,7 @@ Let's begin.
 
 2. Under **Logging** click **Search** to begin the process of identifying matching traffic in the flow logs stored in the designated log group.
 
-    We are interested in identifying the Flow Logs associated with the client and server connectivity, specifically on traffic destined for port 22.
+    We are interested in identifying the flow logs associated with the client and server connectivity, specifically on traffic destined for port 22.
 
     * Click **"Search"**
     * Custom filters: **"data.destinationAddress = 10.1.2.11"**
@@ -338,7 +338,7 @@ Let's begin.
 
       ![flowlog-searchssh](images/flowlog-searchssh.png)
 
-    There are many use cases that can be addressed by collecting Flow Logs. As such the filters created can be complex and creative.
+    There are many use cases that can be addressed by collecting flow logs. As such the filters created can be complex and creative.
 
 **Congratulations!** You have completed this lab.
 
