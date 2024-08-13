@@ -133,6 +133,8 @@ Let's begin.
 
         ![compute-instanceshape](images/compute-instanceshape.png)
 
+    **Note**: For the purpose of this exercise we will use the default **Free-Tier** shape, Oracle Linux 8 Ampere series with 1 OCPU and 6 GB memory. If you are not using a Free-Tier account, you can click on **Change Shape** and select the shape accordingly.
+
     Primary VNIC Information:
     * VCN: **"hol-vcn"**
     * Subnet: **"hol-vcn-snet1"**

@@ -324,7 +324,7 @@ Let's begin.
 
     * Click the Navigation Menu (top left corner)
     * Click **"Observability and Management"**
-    * Click **"Logs"**
+    * Click **"Search"**
 
       ![flowlog-navigation](images/flowlog-navigation.png)
 
@@ -332,7 +332,7 @@ Let's begin.
 
     We are interested in identifying the flow logs associated with the client and server connectivity, specifically on traffic destined for port 22.
 
-    * Click **"Search"**
+    * Under Logging Click **"Search"** if applicable
     * Custom filters: **"data.destinationAddress = 10.1.2.11"**
     * Custom filters: **"data.destinationPort = 22"**
 

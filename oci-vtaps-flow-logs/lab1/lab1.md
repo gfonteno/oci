@@ -167,18 +167,15 @@ Let's begin.
 
 3. In the Enable flow logs **"Basic information"** window, fill in the name, log group and capture filter details with the data below.
 
-    Name and Flow log destination
-
-    * File name prefix: **"hol-flow-log"**
-    * Select **"hol-log-grp"**
+    * In the File name prefix, add **"hol-flow-log"**
+    * In the Flow log destination section, select **"hol-log-grp"**
 
         ![loggroup-create](images/flowlogs-loggroup.png)
 
-    Capture filter
-
-    * Select **"Select a capture filter"**
-    * Select **"Create new capture filter"**
+    * In the Capture filter section, select **"Select a capture filter"** and select, **"Create new capture filter"**
     * Select Sampling rate: **"100%"**
+    * Click **"Create capture filter"**
+    * Click **"Next"**
 
         ![loggroup-create](images/flowlogs-capturefilter.png)
 
