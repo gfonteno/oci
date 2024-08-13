@@ -52,18 +52,22 @@ Let's begin.
 
     See the following options to manipulate the image.
 
+    Export
     * Export Image - click the downward facing arrow icon to initiate the export modal.
+    * Click **"Create ZIP export"**
 
         ![nv-vcndetails](images/nv-imageexport.png)
 
+    Details
+    * Click **"details"**
+    * Click on the **"X"** to close the legend window.
+
+      ![nv-maplegend](images/nv-maplegend.png)
+
+    Resize Image
     * Resize Image - click the symbols in the bottom right corner of the image canvas to resize and center the image.
 
         ![nv-vcndetails](images/nv-imageresize.png)
-
-    * Click **"details"**
-    * Click on the **"X"** to close the window.
-
-      ![nv-maplegend](images/nv-maplegend.png)
 
     **Note**:You can also click-and-hold the objects dragging them to manipulate the image into a customizable depiction.
 
@@ -167,21 +171,21 @@ Let's begin.
 
         ![npa-output](images/npa-output.png)
 
-    * Click on the **red triangle with the exclamation point** to further understand the potential issue.
+    * Click on the **red triangle with the exclamation point** and expand the **Security Status** line **Denied** to further understand the potential issue.
 
         ![npa-outputissuedetail](images/npa-outputissuedetail.png)
 
-    From the analysis, we can see that the issue with connectivity is related to the security list entry for port 80 in server VCN, **hol-vcn2**.
+    **Note:** From the analysis, we can see that the issue with connectivity is related to the security list entry for port 80 in server VCN, **hol-vcn2**.
 
 4. Click **Default Security List for hol-vcn2** to view the security list and to update accordingly.
 
-    **Note** Clicking the security list as directed below will open a new browser tab for editing the security list. Do not close the original browser tab, you will go back to it when finished editing the Security List.
+    Clicking the **Default Security List for hol-vcn2** as directed below will open a new browser tab for editing the security list. Do not close the original browser tab, you will go back to it when finished updating the Security List.
 
     * Click **"Default Security List for hol-vcn2"**
 
         ![npa-defaultsecuritylist](images/npa-defaultsecuritylist.png)
 
-5. On the Security List page add the ingress route.
+5. On the new Tab, **Default Security List** page, add the ingress route.
 
     * Click **"Add Ingress Rules"**
     * Source CIDR: **"0.0.0.0/0"**
@@ -190,23 +194,19 @@ Let's begin.
 
         ![npa-sladdingressroute](images/npa-sladdingressroute.png)
 
-6. On the Security List page add the ingress route.
+6. On the **Create path analysis** tab (the original configuration tab) scroll to the top of the page and click **Analyze**.
 
-    ![npa-successful](images/npa-successful.png)
+    * Click **"Analyze"**
 
-7. Re-run analysis. Select hol-npa
+7. Verify the **"Forward path"** and **Reverse path** are complete and working as intended and **Save** the analysis.
 
-8. Analyze
+    * Click **"Save analysis"**
 
-    * Click **"Analyze"** (Scroll to the top of the previous page)
-
-        ![npa-analyze](images/npa-analyze.png)
-
-9. Validate the path is now successfully bi-directional
+        ![npa-successful](images/npa-successful.png)
 
 **Congratulations!** You have completed this lab.
 
 ## Acknowledgements
 
 * **Author** - Gabriel Fontenot, Principal Cloud Architect, OCI Networking
-* **Last Updated By/Date** - Gabriel Fontenot, June 2024
+* **Last Updated By/Date** - Gabriel Fontenot, September 2024

@@ -63,4 +63,4 @@ If you've signed out of the Oracle Cloud, use these steps to sign back in.
 ## Acknowledgements
 
 * **Author** - Gabriel Fontenot, Principal Cloud Architect, OCI Networking
-* **Last Updated By/Date** - Gabriel Fontenot, June 2024
+* **Last Updated By/Date** - Gabriel Fontenot, September 2024
