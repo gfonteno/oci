@@ -243,7 +243,7 @@ Let's begin.
 
     In the command shell issue the command to enable the TCPDUMP for the interface while listening on the VTAP port, UDP 4789.
 
-      * Command: **"sudo tcpdump -i enp0s6 udp port 4789"**
+      * Command: **"sudo tcpdump -i enp0s6 host 10.1.1.11 -n"**
 
         ![developertools-sshvtaptcpdump](images/developertools-sshvtaptcpdump.png)
 
