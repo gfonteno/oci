@@ -63,7 +63,7 @@ Let's begin.
 
       ![nlb-configurelistener](images/nlb-configurelistener.png)
 
-4. In the Network load balancer **Choose backends** screen, update the name and select **Add backends** and update the **Specify the health check** then click ** **Next**.
+4. In the Network load balancer **Choose backends** screen, update the name and select **Add backends** and update the **Specify the health check** then click **Next**.
 
     Select backends
 

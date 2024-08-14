@@ -25,7 +25,7 @@ In this lab, you will:
 
 ## Task 1: Launch the Cloud Shell and Generate SSH Keys
 
-In this lab and subsequent ones, we will utilize the cloud shell to access the various compute instances to establish communication between the client and server and monitor the VTAP flows. While this can be accomplished in multiple ways, one of the easiest is to use the **Cloud Shell** embedded in the OCI Console. This functionality is only available in the **HOME** region of your account.
+In this lab and subsequent ones, we can utilize the cloud shell to access the various compute instances. While this can be accomplished in multiple ways, one of the easiest is to use the **Cloud Shell** embedded in the OCI Console. **Cloud Shell** is available in every region, but **Cloud Shell** Private Networking is only available in your **HOME** region.
 
 Let's begin.
 
@@ -213,4 +213,4 @@ Let's begin.
 ## Acknowledgements
 
 * **Author** - Gabriel Fontenot, Principal Cloud Architect, OCI Networking
-* **Last Updated By/Date** - Gabriel Fontenot, June 2024
+* **Last Updated By/Date** - Gabriel Fontenot, September 2024

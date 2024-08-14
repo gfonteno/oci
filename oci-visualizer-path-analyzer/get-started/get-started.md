@@ -33,8 +33,8 @@ If you've signed out of the Oracle Cloud, use these steps to sign back in.
 
 1. Go to [cloud.oracle.com](https://cloud.oracle.com/?sourceType=:ow:lp:cpo::::RC_WWMK211125P00013:llid=3872.) and enter your Cloud Account Name and click **Next**. This is the name you chose while creating your account in the previous section. It's NOT your email address. If you've forgotten the name, see the confirmation email.
 
-	* Cloud Account Name
-	* Click **"Next"**
+    * Cloud Account Name
+    * Click **"Next"**
 
 		![2.2](images/ocilogin.png)
 
@@ -56,7 +56,6 @@ If you've signed out of the Oracle Cloud, use these steps to sign back in.
 	* Log In Complete
 
 		![2.2](images/loggedinview.png)
-
 
 **Congratulations!** You have successfully logged in. You may now **proceed to the next lab**.
 

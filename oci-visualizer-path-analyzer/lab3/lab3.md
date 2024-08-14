@@ -200,7 +200,7 @@ Let's begin.
 
         ![npa-successful](images/npa-analyze.png)
 
-7. Verify the **"Forward path"** and **Reverse path** are complete and working as intended and **Save** the analysis.
+7. Verify the **Forward path** and **Reverse path** are complete and working as intended and **Save** the analysis.
 
     * Click **"Save analysis"**
 

@@ -8,6 +8,8 @@ OCI Virtual Test Access Points (VTAPs) and Flow Logs allow customers full visibi
 
 To gain more familiarity with Oracle Cloud's networking concepts, I would recommend watching our introductory [Oracle Cloud Networking YouTube series](https://youtu.be/mIYSgeX5FkM) as well as the [Oracle Cloud Networking Overview Documentation](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm).
 
+Disclaimer: The configurations used within this lab are meant for educational purposes only and should not be implemented in production without prior security review.
+
 ### Objectives
 
 In this workshop, you will learn how to:
@@ -32,4 +34,4 @@ For deploying resources of any kind, OCI asks for an IAM Compartment. Every reso
 ## Acknowledgements
 
 * **Author** - Gabriel Fontenot, Principal Architect, OCI Networking
-* **Last Updated By/Date** - Gabriel Fontenot, June 2024
+* **Last Updated By/Date** - Gabriel Fontenot, September 2024

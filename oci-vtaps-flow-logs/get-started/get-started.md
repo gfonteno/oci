@@ -57,7 +57,6 @@ If you've signed out of the Oracle Cloud, use these steps to sign back in.
 
         ![GS.4](images/loggedinview.png)
 
-
 **Congratulations!** You have successfully logged in. You may now **proceed to the next lab**.
 
 ## Acknowledgements
