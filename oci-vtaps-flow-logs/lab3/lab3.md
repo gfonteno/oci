@@ -225,6 +225,7 @@ Let's begin.
 
     * Click **"Developer Tools"**
     * Click **"Cloud Shell"**
+    * Click **"Network: hol-pn-access"** (If not already selected)
 
       ![developertools-cloudshell](images/developertools-cloudshell.png)
 
