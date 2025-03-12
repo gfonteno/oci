@@ -49,8 +49,8 @@ Let's begin.
 2. In the Network load balancer **Add details** screen, update the **Load balancer name** and scroll down to **Choose networking** section to update the subnet then click **Next**.
 
     * Load balancer name: **"nlb"**
-    * Virtual cloud network: **"hol-vcn"**
-    * Subnet: **"hol-vcn-snet3"**
+    * Virtual cloud network: **"nlb-vcn"**
+    * Subnet: **"nlb-vcn-snet3"**
     * Click **"Next"**
 
       ![nlb-adddetails](images/nlb-adddetails.png)
@@ -58,7 +58,7 @@ Let's begin.
 3. In the Network load balancer **Configure listener** screen, update the name and select **Specify the port** and provide the UDP port number then click **Next**.
 
     * Listener name: **"listener"**
-    * Specify the port: **"4789"**
+    * Specify the port: **"80"**
     * Click **"Next"**
 
       ![nlb-configurelistener](images/nlb-configurelistener.png)
@@ -74,14 +74,17 @@ Let's begin.
 
     Add Backends
 
-    * Select Instance: **"vtap"**
+    * Select Instance: **"web1"**
+    * Click **"Add backends"**
+
+    * Select Instance: **"web2"**
     * Click **"Add backends"**
 
       ![nlb-listeneraddbackends](images/nlb-listeneraddbackends.png)
 
     Specify Health check policy
     * Protocol: **"Protocol"**
-    * Port: **"TCP Port 22"**
+    * Port: **"TCP Port 80"**
     * Click **"Next"**
 
       ![nlb-listenerbackendshealthcheck](images/nlb-listenerbackendshealthcheck.png)
@@ -94,6 +97,9 @@ Let's begin.
 
 6. The **NLB** is configured, you can now move forward to the **Next Task**
 
+## Task 1: Test your Network Load Balancer
+
+1. Navigate to the Public IP address of the NLB using your browser.
 
 **Congratulations!** You have completed this lab.
 

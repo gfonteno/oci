@@ -58,7 +58,7 @@ Let's begin.
 2. Make sure you have the correct Compartment selected and click **Create VCN** in the **Virtual Cloud Networks** table. The VCN will provide the network foundation for all the components related to the compute instances and required network monitoring.
 
     * Click **"Create VCN"**
-    * Name: **"hol-vcn"**
+    * Name: **"nlb-vcn"**
     * IPv4 CIDR: **"10.1.0.0/16"** (Press enter)
     * Click **"Create VCN"**
 
@@ -81,7 +81,7 @@ Let's begin.
 1. In the Subnets table, Click **Create Subnet** to create the first subnet. The first subnet will provide network access for the compute instance representing the client.
 
     * Click **"Create Subnet"**
-    * Name: **"hol-vcn-snet1"**
+    * Name: **"nlb-vcn-snet1"**
     * IP Type: **"IPv4 CIDR Block"**
     * IPv4 CIDR: **"10.1.1.0/24"**
     * Click **"Create Subnet"**
@@ -93,24 +93,14 @@ Let's begin.
 2. In the Subnets table, Click **Create Subnet** to create the second subnet. The second subnet will provide network access for the compute instance representing the server.
 
     * Click **"Create Subnet"**
-    * Name: **"hol-vcn-snet2"**
+    * Name: **"nlb-vcn-snet2"**
     * IP Type: **"IPv4 CIDR Block"**
     * IPv4 CIDR: **"10.1.2.0/24"**
     * Click **"Create Subnet"**
 
         ![subnet-createsubnet2](images/subnet-createsubnet2.png)
 
-3. In the **Subnets table**, Click **Create Subnet** to create the third subnet. The third subnet will provide network access for the compute instance representing the vtap monitoring host.
-
-    * Click **"Create Subnet"**
-    * Name: **"hol-vcn-snet3"**
-    * IP Type: **"IPv4 CIDR Block"**
-    * IPv4 CIDR: **"10.1.3.0/24"**
-    * Click **"Create Subnet"**
-
-        ![subnet-createsubnet3](images/subnet-createsubnet3.png)
-
-4. The **subnets** are created, you can now move forward to the **Next Task**.
+3. The **subnets** are created, you can now move forward to the **Next Task**.
 
     ![subnet-list](images/subnet-list.png)
 
@@ -130,7 +120,7 @@ Let's begin.
 
 2. Select the VCN.
 
-    * Select VCN **"hol-vcn"**
+    * Select VCN **"nlb-vcn"**
 
       ![cn-vcn](images/vcn-vcn.png)
 
@@ -155,7 +145,7 @@ Let's begin.
 6. On the Add Ingress Rules page configure the rule.
 
     * Source CIDR: **"0.0.0.0/0"**
-    * Select IP Protocol: **"UDP"**
+    * Select IP Protocol: **"TCP"**
     * Destination Port Range: **"80"**
     * Click **"Add Ingress Rules"**
 

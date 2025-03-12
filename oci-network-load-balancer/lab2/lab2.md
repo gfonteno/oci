@@ -25,7 +25,7 @@ In this lab, you will:
 
 ## Task 1: Launch the Cloud Shell and Generate SSH Keys
 
-In this lab and subsequent ones, we will utilize the cloud shell to access the various compute instances to establish communication between the client and server and monitor the VTAP flows. While this can be accomplished in multiple ways, one of the easiest is to use the **Cloud Shell** embedded in the OCI Console. This functionality is only available in the **HOME** region of your account.
+In this lab and subsequent ones, we will utilize the cloud shell to access the various compute instances to create the web server instanced for the load balanced applications. While access to the hosts can be accomplished in multiple ways, one of the easiest is to use the **Cloud Shell** embedded in the OCI Console. This functionality is only available in the **HOME** region of your account.
 
 Let's begin.
 
@@ -69,9 +69,9 @@ Let's begin.
 6. In the menu that opens, click Create private network definition and, in the next menu, give it a name and select the existing VCN and subnet1.
 
     * Click **"Create private network definition list"**
-    * Name: **"hol-pn-access"**
-    * Select VCN: **"hol-vcn"**
-    * Select Subnet: **"hol-vcn-snet1"**
+    * Name: **"nlb-pn-access"**
+    * Select VCN: **"nlb-vcn"**
+    * Select Subnet: **"nlb-vcn-snet1"**
     * Select **"Use as active network"**
     * Click **"Create"**
 
@@ -79,7 +79,7 @@ Let's begin.
 
 7. Next, select the private network definition list as the default favorite within the network for Cloud Shell.
 
-    * Click star in the **"Favorite"** column for hol-pn-access
+    * Click star in the **"Favorite"** column for nlb-pn-access
     * Name: **"Close"**
 
         ![cloudshell-privatenetworkdefault](images/cloudshell-privatenetworkdefault.png)
@@ -124,7 +124,7 @@ Let's begin.
 3. In the Create compute instance configuration window that opens, update the compute instance a **Name**, scroll down to the **Primary NIC Information** section and update the **Subnet**, scroll down to **Primary VNIC IP Address** section select **Manually assign IPv4 address** and enter IP address, scroll down to the **Add SSH Key** section and select **Paste public keys** to paste add the SSH Key copied from the previous section and click **Create**.
 
     Name:
-    * Name: **"client"**
+    * Name: **"web1"**
 
         ![compute-instancename](images/compute-instancename.png)
 
@@ -134,8 +134,8 @@ Let's begin.
         ![compute-instanceshape](images/compute-instanceshape.png)
 
     Primary VNIC Information:
-    * VCN: **"hol-vcn"**
-    * Subnet: **"hol-vcn-snet1"**
+    * VCN: **"nlb-vcn"**
+    * Subnet: **"nlb-vcn-snet1"**
 
         ![compute-vnicinformation](images/compute-vnicinformation.png)
 
@@ -161,10 +161,10 @@ Let's begin.
         ![compute-instancepath](images/compute-instancepath.png)
 
     * Click **"Create Instance"**
-    * Name: **"server"**
+    * Name: **"web2"**
     * Shape: **"VM.Standard.A1.Flex (Always Free-Tier)"** or desired shape
-    * VCN: **"hol-vcn"**
-    * Subnet: **"hol-vcn-snet2"**
+    * VCN: **"nlb-vcn"**
+    * Subnet: **"nlb-vcn-snet2"**
     * Private IPv4 Address: **"Manually assign private IPv4 address"**
     * IPv4 address: **"10.1.2.11"**
     * Select **"Paste public keys"**
@@ -173,24 +173,7 @@ Let's begin.
 
         **Note:** The initial state for the compute instance will be noted as **PROVISIONING** and will transition to **ACTIVE** when it is ready for use.
 
-5. While the compute instances is being deployed we will repeat the step above to create an additional compute instance by clicking **Instances** in the path and clicking **Create Instance** in the Instance table. After clicking **Create Instance**, update the compute instance a **Name**, for the first instance update the server, scroll down to the **Primary Nic Information** section and update the **Subnet**, scroll down to **Primary VNIC IP Address** section select *Manually assign IPv4 address" and enter IP address, scroll down to the **Add SSH Key** section and select *Paste public keys** to paste add the SSH Key copied from the previous section and click **Create**.
-
-    * Click **"Instances"** in the path to see the full list of compute instances created
-
-        ![compute-instancepath](images/compute-instancepath.png)
-
-    * Click **"Create Instance"**
-    * Name: **"vtap"**
-    * Shape: **"VM.Standard.A1.Flex (Always Free-Tier)"** or desired shape
-    * VCN: **"hol-vcn"**
-    * Subnet: **"hol-vcn-snet3"**
-    * Private IPv4 Address: **"Manually assign private IPv4 address"**
-    * IPv4 address: **"10.1.3.11"**
-    * Select **"Paste public keys"**
-    * SSH Keys: **"[paste key copied from cloud shell]"**
-    * Click **"Create"**
-
-6. View the complete list of compute instances, client, server and vtap.
+5. View the complete list of compute instances, client, server and vtap.
 
     * Click **"Instances"** in the path to see the full list of compute instances created
 
@@ -200,7 +183,7 @@ Let's begin.
 
         ![compute-instancelist](images/compute-instancelist.png)
 
-7. Click **Oracle Cloud** in the top left of the menu bar to return to the home page.
+6. Click **Oracle Cloud** in the top left of the menu bar to return to the home page.
 
     * Click **"Oracle CLoud"**
 
