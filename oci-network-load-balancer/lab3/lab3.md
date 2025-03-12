@@ -4,7 +4,7 @@
 
 Estimated Time: 20 minutes
 
-### About VTAPs
+### About Network Load Balancers
 
 Virtual Test Access Point, VTAP, functionality is sometimes referred to as traffic mirroring. It copies traffic that traverses a specific point in the network and sends the mirrored traffic to a network packet collector or network analytics tool for further analysis. A VTAP is like a virtual version of port mirroring except, instead of mirroring a port, we mirror traffic at a specific Oracle resource, such as OCI Database service, Exadata virtual machine (VM) cluster, instance virtual network interface cards (VNICs), load balancer as a service (LBaaS), or Autonomous Data Warehouse. Mirrored traffic generated at the VTAP source counts against the total available bandwidth of the VNIC. If congestion occurs, OCI prioritizes production traffic, and mirrored traffic is dropped first. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/vtap.htm) for more information on VTAPs.
 
@@ -97,7 +97,7 @@ Let's begin.
 
 6. The **NLB** is configured, you can now move forward to the **Next Task**
 
-## Task 1: Test your Network Load Balancer
+## Task 2: Test access to your Load Balanced application
 
 1. Navigate to the Public IP address of the NLB using your browser.
 

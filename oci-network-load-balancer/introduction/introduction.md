@@ -4,7 +4,7 @@
 
 Estimated Time: 30 - 45 minutes
 
-(To be updated) OCI Virtual Test Access Points (VTAPs) and Flow Logs allow customers full visibility into customer environments for understanding what your network in OCI is doing. Visit our [VTAP documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/vtap.htm) and [Logging documentation](https://docs.oracle.com/en-us/iaas/Content/Logging/home.htm) for more information on the VTAPs and Flow Logs. We will explore various, common use-cases and look into step-by-step guides on implementing each one of them.
+The Oracle Cloud Infrastructure Flexible Network Load Balancer service, also called Network Load Balancer, provides traffic distribution from one entry point to multiple backend servers in your virtual cloud network (VCN). The Network Load Balancer, NLB, operates at the connection level and load balances incoming client connections to healthy backend servers based on Layer 3 and layer 4 network flows. Visit our [Network Load Balancer documentation](https://docs.oracle.com/en-us/iaas/Content/NetworkLoadBalancer/overview.htm). In this workshop we will explore a common use-case and look into step-by-step guides on implementing a network load balanced application.
 
 To gain more familiarity with Oracle Cloud's networking concepts, I would recommend watching our introductory [Oracle Cloud Networking YouTube series](https://youtu.be/mIYSgeX5FkM) as well as the [Oracle Cloud Networking Overview Documentation](https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/overview.htm).
 
@@ -13,8 +13,8 @@ To gain more familiarity with Oracle Cloud's networking concepts, I would recomm
 In this workshop, you will learn how to:
 
 * Deploy a Virtual Cloud Network (VCN), Subnets, and associated Security Lists
-* Deploy Compute Instances for client/server communication and traffic monitoring
-* Deploy a VTAP along with an NLB and enable Flow Logs to investigate the client/server communication
+* Deploy an Internet Gateway and update the routing table accordingly
+* Deploy a NLB and confirm the application distributes the load accordingly
 
 ### Prerequisites
 

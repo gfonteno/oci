@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 ### About Compute
 

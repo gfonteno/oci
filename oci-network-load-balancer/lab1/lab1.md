@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Estimated Time: 10 minutes
+Estimated Time: 15 minutes
 
 ### About Virtual Cloud Networks and Subnets
 
@@ -10,7 +10,7 @@ Virtual Cloud Networks (VCNs) provide customizable and private cloud networks in
 
 A Subnet is a subdivision of a VCN. Each subnet in a VCN consists of a contiguous range of IPv4 addresses and optionally IPv6 addresses that do not overlap with other subnets in the VCN.
 
-Logs contain critical diagnostic information that tells you how your resources are performing and being accessed. Log groups are logical containers for organizing logs. Logs must always be associated with log groups and you must create a log group to enable the desired log. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Logging/home.htm) for more information on Logging or [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/vcn-flow-logs.htm#vcn_flow_logs) for more details on VCN Flow Logs.
+A security list acts as a virtual firewall for an instance, with ingress and egress rules that specify the types of traffic allowed in and out. The default security list will be updated to allow the VTAP traffic to flow within the VCN. [Visit our documentation](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/securitylists.htm) for more information on Security Lists.
 
 ### Objectives
 
@@ -103,6 +103,14 @@ Let's begin.
 3. The **subnets** are created, you can now move forward to the **Next Task**.
 
     ![subnet-list](images/subnet-list.png)
+
+## Task 4: Create Internet Gateway
+
+1. Create the internet gateway
+
+## Task 4: Update Routing Table
+
+1. Update the routing table
 
 ## Task 4: Update Security List
 
