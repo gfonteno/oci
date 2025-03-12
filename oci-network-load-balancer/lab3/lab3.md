@@ -13,12 +13,9 @@ Network Load Balancer provides the benefits of flow high availability, source an
 In this lab, you will:
 
 * Deploy an instance of an NLB (Network Load Balancer) as a receiver for VTAP flows
-* Create a VTAP for monitoring network communications between the client and server compute instances
-* Update the default Security List to include the VTAP port
 * Generate network traffic from the client to the server
-* Use the VTAP monitor and Flow Logs to identify the client/server network flows
 
-  ![vtapsandflowlogs-slide](images/vtapsandflowlogs.png)
+  ![vtapsandflowlogs-slide](images/tbd.png)
 
 ### Prerequisites
 
