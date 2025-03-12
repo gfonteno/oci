@@ -114,99 +114,52 @@ Let's begin.
 
     ![subnet-list](images/subnet-list.png)
 
-## Task 4: Create Log Group
+## Task 4: Update Security List
 
-With log groups, you do not have to rely on complex compartment hierarchies to secure your logs. We will create a log group to facilitate the flow logs in the section to come.
-
-Let's begin.
-
-1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Observability and Management** and click on **Log Groups**.
-
-    * Click the Navigation Menu (top left corner)
-    * Click **"Observability and Management"**
-    * Click **"Log Groups"**
-
-        ![loggroup-navigation](images/loggroup-navigation.png)
-
-2. In the Log Group tables, click **Create Log Group** to create the log group.
-
-    * Click **"Create Log Group"**
-
-        ![loggroup-createloggroups](images/loggroup-createloggroups.png)
-
-    In the log group configuration window, use the data below to create the log group:
-
-    * Name: **"hol-log-grp"**
-    * Click **"Create"**
-
-        ![loggroup-create](images/loggroup-create.png)
-
-3. The **Log Group** is created, you can now move forward to the **Next Task**.
-
-    ![loggroup-list](images/loggroup-list.png)
-
-## Task 4: Create VCN Flow Log
-
-With VCN Flow Logs, you can capture network traffic information to support monitoring and security needs. We will enable the flow logs in the section below.
+Unlike other security lists, the default security list comes with an initial set of stateful rules, which should in most cases be changed to only allow inbound traffic from authorized subnets relevant to the region that homes that VCN or subnet. For this exercise we will modify the default security list to include the VTAP port UDP 4789. VTAP uses this port/protocol to send collected flows to the desired monitor.
 
 Let's begin.
 
-1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Networking** and click on **Flow logs**.
+1. On the Oracle Cloud Infrastructure Console Home page, using the Navigation menu (on top left) click **Networking** and click on **Virtual cloud networks**.
 
     * Click the Navigation Menu (top left corner)
     * Click **"Networking"**
-    * Click **"Flow logs"**
+    * Click **"Virtual cloud networks"**
 
-        ![loggroup-navigation](images/flowlogs-navigation.png)
+      ![vcn-navigation](images/vcn-navigation.png)
 
-2. In the Flow log configurations tables, click **Enable flow logs** to create the log group.
+2. Select the VCN.
 
-    * Click **"Enable flow logs"**
+    * Select VCN **"hol-vcn"**
 
-        ![loggroup-createloggroups](images/flowlogs-enableflowlogs.png)
+      ![cn-vcn](images/vcn-vcn.png)
 
-3. In the Enable flow logs **"Basic information"** window, use the data below:
+3. On the VCN page, under **Resources** click **Security List**.
 
-    Name and Flow log destination
+    * Click **"Security Lists"**
 
-    * File name prefix: **"hol-flow-log"**
-    * Select **"hol-log-grp"**
+      ![vcn-securitylists](images/vcn-securitylists.png)
 
-        ![loggroup-create](images/flowlogs-loggroup.png)
+4. On the Security list page, click **Default Security List**
 
-    Capture filter
+    * Click **"Default Security Lists for vcn-lab"**
 
-    * Select **"Select a capture filter"**
-    * Select **"Create new capture filter"**
-    * Select Sampling rate: **"100%"**
+      ![vcn-selectdefaultsl](images/vcn-selectdefaultsl.png)
 
-        ![loggroup-create](images/flowlogs-capturefilter.png)
+5. On the Default Security Lists page under **Ingress Rules** click **Add Ingress Rules**.
 
-4. In the Enable flow logs **"Enablement points"** window, use the data below:
+    * Click **"Add Ingress Rules"**
 
-    * Click **"Add enablement points"**
-    * Select **"Virtual cloud network"**
-    * Click **"Continue"**
+      ![vcn-addingressrulessl](images/vcn-addingressrulessl.png)
 
-        ![loggroup-create](images/flowlogs-vcn.png)
+6. On the Add Ingress Rules page configure the rule.
 
-    * Virtual cloud network: **"hol-vcn"**
-    * Click **"Add enablement points"**
-    * Click **"Next"**
+    * Source CIDR: **"0.0.0.0/0"**
+    * Select IP Protocol: **"UDP"**
+    * Destination Port Range: **"80"**
+    * Click **"Add Ingress Rules"**
 
-        ![loggroup-create](images/flowlogs-enablementpoints.png
-
-5. In the Enable flow logs **"Review and create"** window, use the data below:
-
-    * Click **"Enable flow logs"**
-
-        ![loggroup-create](images/flowlogs-enable.png
-
-6. **Flow Logs** are now enabled, you can now move forward to the **Next Task**.
-
-    ![loggroup-list](images/flowlogs-active.png)
-
-    **Note**: It may take a minutes to transition to active.
+      ![vcn-addingressrulesslfinish](images/vcn-addingressrulesslfinish.png)
 
 7. Click **Oracle Cloud** in the top left of the menu bar to return to the home page.
 
@@ -214,9 +167,9 @@ Let's begin.
 
         ![oraclecloud-home](images/oraclecloud-home.png)
 
-**Congratulations!** You have successfully created a VCN and the associated three Subnets with logging enabled. You may now **proceed to the next lab**.
+**Congratulations!** You have successfully created a VCN and the associated Subnets. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
 * **Author** - Gabriel Fontenot, Principal Cloud Architect, OCI Networking
-* **Last Updated By/Date** - Gabriel Fontenot, June 2024
+* **Last Updated By/Date** - Gabriel Fontenot, March 2025
