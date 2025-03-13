@@ -23,7 +23,7 @@ In this lab, you will:
 
 When you complete the exercise, the network topology will look like the following, one VCN and three subnets.
 
-![vcnsubnetoverview-slide](images/vcnsubnetoverview.png)
+![vcnsubnetoverview-slide](images/lb-overview.png)
 
 ### Prerequisites
 
