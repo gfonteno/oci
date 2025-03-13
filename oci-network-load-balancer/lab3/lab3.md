@@ -58,7 +58,7 @@ Let's begin.
 
       ![nlb-configurelistener](images/nlb-configurelistener.png)
 
-## Task 3: Create NLB Listeners
+## Task 3: Create NLB Backendsets
 
 1. In the Network load balancer **Choose backends** screen, update the name and select **Add backends** and update the **Specify the health check** then click ** **Next**.
 
@@ -94,7 +94,21 @@ Let's begin.
 
 3. The **NLB** is configured, you can now move forward to the **Next Task**
 
-## Task 2: Test access to your Load Balanced application
+## Task 2: Build the Web servers
+
+1. SSH to compute instance, web-server1
+
+    * Commandline: **"CMD1"**
+    * Commandline: **"CMD2"**
+    * Commandline: **"CMD3"**
+
+2. SSH to compute instance, web-server1
+
+    * Commandline: **"CMD1"**
+    * Commandline: **"CMD2"**
+    * Commandline: **"CMD3"**
+
+## Task 3: Test access to your Load Balanced application
 
 1. Navigate to the Public IP address of the NLB using your browser.
 
