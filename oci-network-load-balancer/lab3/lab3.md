@@ -48,7 +48,9 @@ Let's begin.
 
       ![nlb-adddetails](images/nlb-adddetails.png)
 
-3. In the Network load balancer **Configure listener** screen, update the name and select **Specify the port** and provide the UDP port number then click **Next**.
+## Task 2: Create NLB Listeners
+
+1. In the Network load balancer **Configure listener** screen, update the name and select **Specify the port** and provide the UDP port number then click **Next**.
 
     * Listener name: **"listener"**
     * Specify the port: **"80"**
@@ -56,7 +58,9 @@ Let's begin.
 
       ![nlb-configurelistener](images/nlb-configurelistener.png)
 
-4. In the Network load balancer **Choose backends** screen, update the name and select **Add backends** and update the **Specify the health check** then click ** **Next**.
+## Task 3: Create NLB Listeners
+
+1. In the Network load balancer **Choose backends** screen, update the name and select **Add backends** and update the **Specify the health check** then click ** **Next**.
 
     Select backends
 
@@ -82,13 +86,13 @@ Let's begin.
 
       ![nlb-listenerbackendshealthcheck](images/nlb-listenerbackendshealthcheck.png)
 
-5. In the Network load balancer **Review and create** screen, review the configuration and click ** **Create network load balancer**.
+2. In the Network load balancer **Review and create** screen, review the configuration and click ** **Create network load balancer**.
 
     * Click **"Create network load balancer"**
 
       ![nlb-createnetworkloadbalancer](images/nlb-createnetworkloadbalancer.png)
 
-6. The **NLB** is configured, you can now move forward to the **Next Task**
+3. The **NLB** is configured, you can now move forward to the **Next Task**
 
 ## Task 2: Test access to your Load Balanced application
 
