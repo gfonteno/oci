@@ -57,16 +57,22 @@ Let's begin.
 
 2. Make sure you have the correct Compartment selected and click **Create VCN** in the **Virtual Cloud Networks** table. The VCN will provide the network foundation for all the components related to the compute instances and required network monitoring.
 
-    * Click **"Create VCN"**
-    * Name: **"nlb-vcn"**
-    * IPv4 CIDR: **"10.1.0.0/16"** (Press enter)
+    * Confirm you are in the desired compartment
     * Click **"Create VCN"**
 
         ![vcn-createvcn](images/vcn-createvcn.png)
 
+3. Entre the **VCN** details to create the VCN.
+
+    * Name: **"nlb-vcn"**
+    * IPv4 CIDR: **"10.1.0.0/16"** (Press enter)
+    * Click **"Create VCN"**
+
+        ![vcn-createvcndetails](images/vcn-createvcndetails.png)
+
         **Note**: If not directed to update/change a field, leave everything else as default.
 
-3. The **VCN** is created, you can now move forward to the **Next Task**.
+4. The **VCN** is created, you can now move forward to the **Next Task**.
 
     ![vcn-list](images/vcn-list.png)
 
